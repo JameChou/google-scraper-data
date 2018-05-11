@@ -2,5 +2,19 @@ extends layout
 
 block content
 	div.container
-		h1 Program Name
+		h1 Olympic Barbell
 		p Hello World
+		
+		table.table.table-hover
+			thead
+				tr
+					th(scope="col") Rank
+					th(scope="col") Name
+					th(scope="col") Website
+			tbody
+				each person in datas 
+					tr
+						td #{person.index}
+						td #{person.Name}
+						td 
+							a(href=person.Website, target="_blank") #{person.Website}
