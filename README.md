@@ -1,7 +1,7 @@
 ## Google Scraper Data
 
 This project for reading GoogleScraper output json then insert the data into MySQL or other database.
-Query the data and show the data by website client. Easy for querying and searching.
+Query the data and show the data by web client. Easy for querying and searching.
 
 Check the link [GoogleScraper](https://github.com/NikolaiT/GoogleScraper), learn more about **GoogleScraper**. GoogleScraper provide command line to fetch data from different search engines.
 
