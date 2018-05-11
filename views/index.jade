@@ -2,19 +2,23 @@ extends layout
 
 block content
 	div.container
-		h1 Olympic Barbell
-		p Hello World
+		h1 爬虫检索结果 
+		p 不同引擎之间查找检索结果 
 		
 		table.table.table-hover
 			thead
 				tr
-					th(scope="col") Rank
-					th(scope="col") Name
-					th(scope="col") Website
+					th(scope="col") 域名
+					th(scope="col") 关键词
+					th(scope="col") 搜索引擎
+					th(scope="col") 操作
 			tbody
-				each person in datas 
+				each r in datas 
 					tr
-						td #{person.index}
-						td #{person.Name}
-						td 
-							a(href=person.Website, target="_blank") #{person.Website}
+						td #{r.domain}
+						td #{r.value}
+						td #{r.name}
+						td
+							a.btn.btn-sm.btn-default(href="http://"+r.domain, target="_blank") 查看
+							&nbsp;
+							a.btn.btn-sm.btn-default(href="https://au.godaddy.com/whois/results.aspx?checkAvail=1&tmskey=&domain="+r.domain, target="_blank") Whois
